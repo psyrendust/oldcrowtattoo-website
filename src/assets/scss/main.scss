@@ -1,0 +1,197 @@
+@import 'CSS:old-crow-tattoo-icons';
+
+.off-canvas-wrapper-inner {
+  min-height: 100vh;
+}
+.off-canvas-wrapper {
+  min-height: 100%;
+}
+.off-canvas {
+  padding: 15px 0px;
+  min-height: 100vh;
+  overflow-y: auto;
+  letter-spacing: 0.1rem;
+  a {
+    color: $white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: .75;
+    line-height: 1.875rem;
+  }
+  hr {
+    border: solid #444444;
+    border-width: 1px 0 0;
+    clear: both;
+    height: 0;
+    margin: 8px 0 20px 0;
+  }
+  ul {
+    margin-left: 0em;
+  }
+  li,
+  .off-canvas-contact h3,
+  .off-canvas-hours h3,
+  .off-canvas-social h3 {
+    padding: 0px 15px;
+    list-style-type: none;
+  }
+  .first,
+  .off-canvas-contact h3,
+  .off-canvas-hours h3,
+  .off-canvas-social h3 {
+    font-family: "Abril Fatface";
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: $dark-gray;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+  .off-canvas-contact {
+    @include button-group-expand('section.contact a');
+    section.contact {
+      a {
+        @include button(false, #333, #333, $white, solid);
+        min-width: 102px;
+        max-width: 102px;
+        margin-bottom: 2px;
+      }
+    }
+    section:nth-of-type(2) {
+      a {
+        @include button(true, #333, #333, $white, solid);
+        font-size: 0.7rem;
+        text-align: left;
+        padding-left: 0;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  .off-canvas-contact,
+  .off-canvas-hours,
+  .off-canvas-social {
+    @include grid-row;
+    section {
+      padding: 0 15px;
+    }
+    section.contact {
+      margin-top: 10px;
+      padding: 0;
+    }
+  }
+  .off-canvas-hours {
+    section {
+      opacity: 0.75;
+      font-size: 0.7rem;
+      font-weight: bold;
+      padding: 14px 15px 16px;
+      div:first-of-type {
+        padding-bottom: 6px;
+      }
+    }
+  }
+  .off-canvas-social {
+    section {
+      padding: 10px 0 16px 0;
+    }
+    a {
+      @include button(true, #333, #333, $white, solid);
+      text-align: left;
+      margin-bottom: 2px;
+      padding: 0.50em 1em;
+    }
+  }
+}
+button.menu-icon {
+  @include hamburger($white, $medium-gray);
+}
+
+
+
+
+.global-nav {
+  background: $medium-gray;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+  ul:first-child {
+    float: left;
+  }
+  ul:last-child {
+    float: right;
+  }
+  .menu {
+    &:last-child {
+      // border-left: 1px solid #4e4e4e;
+    }
+    &.submenu {
+      border: 0;
+      margin-left: -1px;
+    }
+    li:not(:last-child) {
+      // border-right: 1px solid #4e4e4e;
+    }
+    a {
+      height: 45px;
+      line-height: 45px !important;
+      color: #e6e6e6;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+    .is-dropdown-submenu-item {
+      a:hover {
+        background: #2c2c2c;
+      }
+    }
+  }
+  ul.submenu.menu.vertical.is-dropdown-submenu.first-sub {
+    border-left: 1px solid #4e4e4e;
+  }
+  .dropdown.menu:not(.vertical) .is-dropdown-submenu.first-sub {
+    top: 100%;
+    left: 0;
+    right: auto;
+  }
+  .dropdown.menu > li.is-dropdown-submenu-parent {
+    a {
+      padding: 0.7rem 1rem;
+      position: relative;
+      &::after {
+        content: '';
+        display: none;
+        border: 0;
+        right: 0;
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 43.75em) {
+  .hero.home-large-hero {
+    background: url(../img/home-bg-01.svg) bottom center;
+    background-size: cover;
+    background-position: center;
+    padding-top: 180px;
+    padding-bottom: 250px;
+  }
+}
+
+.hero.home-large-hero {
+  background: url(../img/home-bg-small-02.svg) bottom center;
+  background-size: cover;
+}
+.hero {
+  background: url(../img/subheader-bg-01.svg) center center repeat-x;
+  background-size: cover;
+  position: relative;
+  padding: 2.5rem 0 4.5rem;
+  text-align: center;
+  overflow: visible;
+}
